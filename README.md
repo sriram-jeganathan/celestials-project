@@ -24,3 +24,24 @@ sqlite3 --version
 - It supports storing data in the memory or in a file
 - It supports structured query language to create database, table, etc
 
+## Creating a Database
+
+Let's create a database
+```
+sqlite3 cit.db
+```
+
+Let's create the students table inside the cit database
+```
+CREATE TABLE students (
+    student_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    department TEXT NOT NULL,
+    branch TEXT NOT NULL,
+    year TEXT NOT NULL,
+    interests TEXT NOT NULL
+);
+```
+Inserting student record
+
