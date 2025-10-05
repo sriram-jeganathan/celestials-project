@@ -1,0 +1,31 @@
+CREATE TABLE students (
+    student_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    department TEXT NOT NULL,
+    branch TEXT NOT NULL,
+    year TEXT NOT NULL,
+    interests TEXT NOT NULL
+);
+
+ALTER TABLE students ADD COLUMN course TEXT NOT NULL;
+
+INSERT INTO students ( first_name, last_name, course, department, branch, year, interests )
+VALUES ( "Sriram", "Jeganathan", "BE", "CSE", "Core", "1st", "leetcode" );
+
+INSERT INTO students ( first_name, last_name, course, department, branch, year, interests )
+VALUES ( "Nitesh", "Jeganathan", "BTech", "CSE", "Core", "4th" , "job" );
+
+INSERT INTO students ( first_name, last_name, course, department, branch, year, interests )
+VALUES ( "Jeganathan", "S", "MCA", "CORE", "Core", "4th" , "job" );
+
+INSERT INTO students ( first_name, last_name, course, department, branch, year, interests )
+VALUES ( "Meenakshi", "N", "BE", "CSE", "Core", "1st" , "tuition" );
+
+SELECT * FROM students;
+
+
+curl -X POST http://localhost:3000/students/1 \
+     -H "Content-Type: application/json" \
+     -d '{"first_name":"Sriram","last_name":"Jegan"}'
+
