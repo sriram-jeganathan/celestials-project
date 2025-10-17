@@ -1,4 +1,4 @@
-# Celestials Project
+# Project 1
 
 ## Install NodeJS in Ubuntu
 ```
